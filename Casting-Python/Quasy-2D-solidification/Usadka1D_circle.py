@@ -293,3 +293,4 @@ class Usadka1D_circl:
             vtkoutput.SetInputData(mesh)
             vtkoutput.SetFileName(VTKFile)
             vtkoutput.Write()
+

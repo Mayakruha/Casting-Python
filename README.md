@@ -35,6 +35,6 @@ f.write('Axis, m; Shrinkage, mm; Surface Temperature, Celcius; Heat Flux, MVt/m2
 for line in model.output:
     for value in line:
         f.write(str(value)+';')
-```
     f.write('\n')
 f.close()
+```

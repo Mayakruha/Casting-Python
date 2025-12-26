@@ -1,4 +1,4 @@
-mport numpy as np
+import numpy as np
 from math import exp, log, pi
 import vtk
 from FEMtoolkit import FEMtoolkit, import_abq, FacesNodes

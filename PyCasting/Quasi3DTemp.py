@@ -1,7 +1,8 @@
 import numpy as np
 from math import exp, log, pi
 import vtk
-from FEMtoolkit import FEMtoolkit, import_abq, FacesNodes
+from meshio import read
+from FEMtoolkit import FEMtoolkit, FacesNodes
 #-----------------------------------------------
 #----------------MOULDS-------------------------
 #-----------------------------------------------
@@ -252,7 +253,7 @@ class Quasi3DTemp:
         self.Epsilon=0.001          #tolerance for extraction of temperature from H
         self.KapaN=20               #Number of columns in the output of billet stiffness
         self.PointScreen={'BROAD':12061,'NARROW':201} #Node and BC for data printing
-        self.fem=import_abq(FileName)
+        self.fem=read(FileName)
         self.AREA=np.zeros((self.fem.MaxNodeNum+1))
         self.T=np.zeros(1)
     #-----------steel properties----------------------
